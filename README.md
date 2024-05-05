@@ -3,6 +3,8 @@
 Welcome to Digital Week 2024! 
 This project is meant to be a cool looking presentation for the interactive quiz questions in the school-wide Scavenger Hunt Event.
 
+The site can be previewed online, synced to the changes of this repo [HERE](https://pakscavengerhunt.netlify.app/).
+
 ## Features
 
 NOTE: This section is basicly a TODO for now.
