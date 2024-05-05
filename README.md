@@ -1,6 +1,7 @@
 # Digital Week 2024 Scavenger Hunt
 
-Welcome to Digital Week 2024! This project is meant to be a cool looking presentation for the interactive quiz questions in the school-wide Scavenger Hunt Event.
+Welcome to Digital Week 2024! 
+This project is meant to be a cool looking presentation for the interactive quiz questions in the school-wide Scavenger Hunt Event.
 
 ## Features
 
