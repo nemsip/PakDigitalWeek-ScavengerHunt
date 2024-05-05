@@ -8,7 +8,7 @@ NOTE: This section is basicly a TODO for now.
 
 - **Terminal-like Interface**: The project uses HTML, CSS, and JavaScript to create a terminal-like interface. This interface is designed to mimic a stereotypical vintage terminal. It was not inspired by Blooket's Cryptohack interface, but in the end it kind of came out like that :/
 
-- **Interactivenesss**: The quiz is interactive, with users able to press enter to begin the quiz. The questions and furthur instructions are shown with animations done natively in css and js, which will hopefully make it immersive and engaging for the little time the players will be interacting with the website.
+- **Interactiveness**: The quiz is interactive, with users able to press enter to begin the quiz. The questions and furthur instructions are shown with animations done natively in css and js, which will hopefully make it immersive and engaging for the little time the players will be interacting with the website.
 
 
 - **Sound Design**: The project (will) also incorporates custom composed sound design to enhance the user experience and make it more emersive. This will have an ambient background track that plays at the title screen, then techie sounds will play during the main quesion unveiling and instruction process. (I'm planning to do a "Your next mission, should you choose to accept it, is to blah blah" thing for instructions bit.)
