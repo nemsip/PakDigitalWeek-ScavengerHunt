@@ -71,7 +71,7 @@ const txt = [
   "apport ttf-ubuntu-font-family update-notifier-common cmatrix-xfont strace",
   "Recommended packages:",
   "run-one",
-  "DELAY:0.8",
+  "DELAY:0.7",
   "The following NEW packages will be installed:",
   "apg atop bmon byobu ccze cmatrix scavengerHunt htop jp2a libconfuse-common libconfuse2 libio-pty-perl libipc-run-perl libtime-duration-perl moreutils pastebinit speedometer",
   "0 upgraded, 17 newly installed, 0 to remove and 930 not upgraded.",
