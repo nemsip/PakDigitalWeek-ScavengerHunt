@@ -59,7 +59,7 @@ function displayConsoleOutput(textArray, elementId, delay = 500) {
 }
 
 const txt = [
-  "DELAY:2",
+  "DELAY:2.5",
   "Reading package lists... Done",
   "DELAY:1",
   "Building dependency tree... Done",
