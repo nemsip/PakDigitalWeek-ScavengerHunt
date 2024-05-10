@@ -109,7 +109,20 @@ html {
   font-size: 1.6rem; /* Adjusted font size */
 }
 
+#matrix {
+  display: none; /* Initially hidden */
+  font-size: 3.5rem;
+  color: rgba(128, 255, 128, 0.8);
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 /* terminal overlay shtuff */
+
+
 
 .noise {
   pointer-events: none;
