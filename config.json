@@ -1,0 +1,160 @@
+{
+    "sections": [
+      {
+        "title": "Misinformation",
+        "questions": [
+          {
+            "question": "Why is misinformation harmful?",
+            "options": [
+              "A) Misinformation helps people make informed decisions.",
+              "B) Misinformation can lead to confusion and misunderstanding.",
+              "C) Misinformation promotes critical thinking skills.",
+              "D) Misinformation has no impact on society."
+            ],
+            "correct_answer": "B"
+          },
+          {
+            "question": "What can help stop misinformation?",
+            "options": [
+              "A) Sharing information without verifying its accuracy.",
+              "B) Fact-checking sources before sharing information.",
+              "C) Spreading rumors and unverified news stories.",
+              "D) Believing everything you read online without questioning it."
+            ],
+            "correct_answer": "B"
+          },
+          {
+            "question": "Where is misinformation found?",
+            "options": [
+              "A) Misinformation is only found in academic journals.",
+              "B) Misinformation is primarily found in trusted news sources.",
+              "C) Misinformation can be found on social media, websites, and even in conversations.",
+              "D) Misinformation is restricted to government reports."
+            ],
+            "correct_answer": "C"
+          }
+        ]
+      },
+      {
+        "title": "Online Safety",
+        "questions": [
+          {
+            "question": "What is personal information, and why is it important to keep it safe online?",
+            "options": [
+              "A) Personal information encompasses details like your name, address, phone number, and more, and it's important to keep it safe to prevent identity theft and fraud.",
+              "B) Personal information includes only your name and address, and it's not important to keep it safe online.",
+              "C) Personal information refers to information about celebrities, and it's not crucial to safeguard it online.",
+              "D) Personal information includes only your hobbies and interests, and it's not necessary to keep it safe online."
+            ],
+            "correct_answer": "A"
+          },
+          {
+            "question": "Why should you create strong and unique passwords for your online accounts?",
+            "options": [
+              "A) Weak passwords are easier to remember.",
+              "B) Using the same password for all accounts saves time.",
+              "C) Strong and unique passwords make it harder for hackers to gain unauthorized access to your accounts.",
+              "D) It doesn't matter what type of password you use since online accounts are secure."
+            ],
+            "correct_answer": "C"
+          },
+          {
+            "question": "What are some common signs of a phishing email?",
+            "options": [
+              "A) The email contains correct spelling and grammar.",
+              "B) The email asks you to click on a link or provide sensitive information urgently.",
+              "C) The email is from a known and trusted sender.",
+              "D) The email contains generic greetings like 'Dear User' instead of your name."
+            ],
+            "correct_answer": "B"
+          }
+        ]
+      },
+      {
+        "title": "Two-factor authentication",
+        "questions": [
+          {
+            "question": "What is the main purpose of 2 Factor Authentication?",
+            "options": [
+              "A) To make login processes slower.",
+              "B) To share login credentials with multiple users.",
+              "C) To make it easier for hackers to access accounts.",
+              "D) To add an extra layer of security to user accounts."
+            ],
+            "correct_answer": "D"
+          },
+          {
+            "question": "Is 2FA only used for online services or can it also be used for physical access like unlocking doors?",
+            "options": [
+              "A) 2FA is exclusively for online services and cannot be used for physical access.",
+              "B) 2FA can only be used for physical access and not for online services.",
+              "C) 2FA is not effective for any type of access control.",
+              "D) 2FA can be used for both online services and physical access."
+            ],
+            "correct_answer": "D"
+          },
+          {
+            "question": "What are the benefits of using 2FA?",
+            "options": [
+              "A) It provides additional security beyond just a password.",
+              "B) It makes the login process quicker.",
+              "C) It increases the likelihood of forgetting login details.",
+              "D) It allows unlimited access to accounts without any verification."
+            ],
+            "correct_answer": "A"
+          }
+        ]
+      },
+      {
+        "title": "Search History",
+        "questions": [
+          {
+            "question": "How does Google use information from users' search history to target advertisements more effectively?",
+            "options": [
+              "A) By randomly selecting ads for users without any specific criteria.",
+              "B) By analyzing search history to understand users' interests and preferences.",
+              "C) By selling users' search history to third-party advertisers.",
+              "D) By displaying ads unrelated to users' search history."
+            ],
+            "correct_answer": "B"
+          },
+          {
+            "question": "How does Google recommend personalized content based on users' search history?",
+            "options": [
+              "A) By showing content based solely on trending topics.",
+              "B) By guessing what users might like without considering their search history.",
+              "C) By displaying generic content to all users regardless of their search history.",
+              "D) By using algorithms to suggest content related to users' past searches."
+            ],
+            "correct_answer": "D"
+          }
+        ]
+      },
+      {
+        "title": "Artificial Intelligence",
+        "questions": [
+          {
+            "question": "What is AI?",
+            "options": [
+              "A) AI is the simulation of human intelligence by using machine learning",
+              "B) A type of computer game.",
+              "C) A popular social media platform.",
+              "D) A method of cooking food quickly."
+            ],
+            "correct_answer": "A"
+          },
+          {
+            "question": "How can AI help you?",
+            "options": [
+              "A) By teaching you how to cook your favorite meals.",
+              "B) By helping you find the perfect outfit for any occasion.",
+              "C) By assisting you in organizing your schedule and reminders.",
+              "D) By predicting your favorite movies to watch."
+            ],
+            "correct_answer": "C"
+          }
+        ]
+      }
+    ]
+  }
+  
