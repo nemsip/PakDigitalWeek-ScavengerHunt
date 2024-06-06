@@ -1,6 +1,3 @@
-const ANIM_SPEED = 10;
-const ANIM_INTERATIONS = 10;
-
 // Okay wallace im not sure i can be done by the due date this is way over my head
 // i have no idea what im doing i have been trying to figure this out for hours
 // i have no idea how to get the data from the config.json file without overcomplicating it
@@ -8,6 +5,12 @@ const ANIM_INTERATIONS = 10;
 // ask mr mcleod (my computer studies teacher) for help for i am lost in this quest alone and i need guidance to find the light
 // img oing to bed after i push this to github
 //gn 
+
+
+const ANIM_SPEED = 10;
+const ANIM_INTERATIONS = 10;
+
+
 
 document.addEventListener('keydown', function(event) {
     if (event.key === 'Enter') {
