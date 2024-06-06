@@ -3,15 +3,15 @@
 Welcome to Digital Week 2024! 
 This project is meant to be a cool looking presentation for the interactive quiz questions in the school-wide Scavenger Hunt Event.
 
-The site can be previewed online, synced to the changes of this repo [HERE](https://pakscavengerhunt.netlify.app/).
+The site can be live previewed online, synced to the changes of this repo [HERE](https://pakscavengerhunt.netlify.app/).
 
 ## Features
 
 NOTE: This section is basicly a TODO for now.
 
-- **Terminal-like Interface**: The project uses HTML, CSS, and JavaScript to create a terminal-like interface. This interface is designed to mimic a stereotypical vintage terminal. It was not inspired by Blooket's Cryptohack interface, but in the end it kind of came out like that :/
-
-- **Interactiveness**: The quiz is interactive, with users able to press enter to begin the quiz. The questions and furthur instructions are shown with animations done natively in css and js, which will hopefully make it immersive and engaging for the little time the players will be interacting with the website.
+- **Terminal-like Interface**: The project uses HTML, CSS, and JavaScript to create a terminal-like interface. This interface is designed to mimic a stereotypical vintage terminal. It was inspired by Blooket's Cryptohack interface, using the same way to achieve that look. I won't call it stealing because they stole it from a random codepen first.
+- 
+- **Interactiveness**: The quiz is interactive. The questions and instructions are shown with animations done natively in css and js, which will hopefully make it immersive and engaging for the little time the players will be interacting with the website.
 
 
 - **Sound Design**: The project (will) also incorporates custom composed sound design to enhance the user experience and make it more emersive. This will have an ambient background track that plays at the title screen, then techie sounds will play during the main quesion unveiling and instruction process. (I'm planning to do a "Your next mission, should you choose to accept it, is to blah blah" thing for instructions bit.)
