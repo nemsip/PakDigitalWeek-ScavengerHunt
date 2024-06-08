@@ -166,20 +166,22 @@ async function typeText(elm, txt) {
     return true;
 }
 
-function answerClicked(clicked, q, snum, qnum) {
+async function answerClicked(clicked, q, snum, qnum) {
+    if(q.correct_answer == clicked) {
+        questionsCorrect++;
+        await statusSwitcher(true);
+    } else {
+        questionsIncorrect++;
+        await statusSwitcher(false);
+    }
+
     const nextQ = nextQuestion(snum, qnum);
     if(nextQ == "complete") {
         // ...
-        alert("done");
+        const questionTotal = questionsCorrect+questionsIncorrect;
+        const correctPercent = (100 * questionsCorrect) / questionTotal;
+        alert("Done! " + Math.round(correctPercent) + "% correct");
     } else {
-        if(q.correct_answer == clicked) {
-            questionsCorrect++;
-            // TODO: say "correct!"
-        } else {
-            questionsIncorrect++;
-            // TODO: tell user off
-        }
-
         const nextQInfo = scavengerHuntData.sections[nextQ[0]].questions[nextQ[1]]; 
         showQuestion_Prep(nextQInfo);
         questionPopup(matrixElement, nextQInfo, nextQ[0], nextQ[1]);
@@ -190,6 +192,17 @@ function showQuestion_Prep(currq) {
     // reset parent
     matrixElement.innerHTML = "";
     matrixElement.textContent = currq.question;
+}
+
+async function statusSwitcher(correct) {
+    matrixElement.innerHTML = "";
+    if(correct) {
+        matrixElement.textContent = "CORRECT";
+        return pause(3500);
+    } else {
+        matrixElement.innerHTML = "<span class='text-incorrect'>INCORRECT</span>";
+        return pause(7500);
+    }
 }
 
 function nextQuestion(currentS, currentQ) {

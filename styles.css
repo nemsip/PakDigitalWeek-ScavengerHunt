@@ -127,6 +127,11 @@ html {
   transform: translate(-50%, -50%);
 }
 
+.text-incorrect {
+  color: rgba(255, 54, 54, 0.8);
+  text-shadow: 0 0 1ex rgba(255, 54, 54, 0.8), 0 0 2px rgba(255, 255, 255, 0.8);
+}
+
 /* terminal overlay shtuff */
 
 
