@@ -200,3 +200,28 @@ html {
   font-weight: normal;
   font-style: normal;
 }
+
+.btn-boxes {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* fr fr */
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 7px;
+  margin-top: 10px;
+}
+
+.btn-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+  background-color: #002805; /* worry about design later */
+  color: #59b167;
+  border-radius: 5px;
+  font-size: 16px; 
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-box:hover {
+  background-color: #001b03;
+}

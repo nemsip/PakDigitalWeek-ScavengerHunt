@@ -1,6 +1,16 @@
+var currq, section_number, question_number; // current question
+
 function pause(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
+    // return new Promise(resolve => setTimeout(resolve, ms));
+    return true;
 }
+
+function randomNumber(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) + min)
+}
+
+// minified (obviously)
+function getLetterFromNumber(r,t=!0){const e=t?65:97;let o="";do{o=String.fromCharCode(e+r%26)+o,r=Math.floor(r/26)-1}while(r>=0);return o}
 
 // Notice these run immediately, but because they don't 'await',
 // the rest of the script continues to run while these download.
@@ -107,7 +117,58 @@ document.addEventListener('keydown', async function start(event) {
             console.error('Error fetching questions:', error);
         }
 
+        section_number = 0;
+        question_number = 0;
+        currq = scavengerHuntData.sections[section_number].questions[question_number];
+
         // TODO: Do something with scavengerHuntData
-        element.textContent = scavengerHuntData.sections[0].questions[0].question;
+        element.textContent = currq.question;
+
+        questionPopup(element, currq, section_number, question_number);
     }
 });
+
+async function questionPopup(parent, q, snum, qnum) {
+    // TODO: unscramble and animation
+    const boxesparent = document.createElement("div");
+    boxesparent.classList.add("btn-boxes");
+
+    opts = q.options;
+
+    for (let i = 0; i < opts.length; i++) {
+        const elm = document.createElement("div");
+
+        elm.classList.add("btn-box");
+        elm.dataset.ansLetter = getLetterFromNumber(i);
+
+        boxesparent.appendChild(elm);
+    }
+
+    parent.appendChild(boxesparent);
+
+    for (let i = 0; i < boxesparent.children.length; i++) {
+        elm = boxesparent.children[i];
+        elm.addEventListener("click", (e) => {answerClicked(e.target.dataset.ansLetter, q, snum, qnum)});
+
+        elm = boxesparent.children[i];
+        await typeText(elm, opts[i]);
+    }
+}
+
+var i = {};
+
+async function typeText(elm, txt) {
+    for (let i = 0; i < txt.length; i++) {
+        elm.innerHTML += txt.charAt(i);
+        await pause(randomNumber(10, 30));
+    }
+    return true;
+}
+
+function answerClicked(clicked, q, snum, qnum) {
+    if(q.correct_answer == clicked) {
+        alert("correct");
+    } else {
+        alert("incorrect");
+    }
+}
