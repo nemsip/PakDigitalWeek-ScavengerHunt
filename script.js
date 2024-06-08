@@ -1,5 +1,7 @@
+var scavengerHuntData;
 var currq, section_number, question_number; // current question
 const matrixElement = document.getElementById('matrix'); // i don't want to pass this through all the functions
+var questionsCorrect = questionsIncorrect = 0;
 
 function pause(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
@@ -106,7 +108,6 @@ document.addEventListener('keydown', async function start(event) {
             await pause(speed);
         }
 
-        let scavengerHuntData;
         try {
             const response = await fetchConfig; // fetch('config.json');
             if (!response.ok) {
@@ -166,24 +167,41 @@ async function typeText(elm, txt) {
 }
 
 function answerClicked(clicked, q, snum, qnum) {
-    if(q.correct_answer == clicked) {
-        alert("correct");
-        // TODO: go to next question, keep track of score
+    const nextQ = nextQuestion(snum, qnum);
+    if(nextQ == "complete") {
+        // ...
+        alert("done");
     } else {
-        alert("incorrect");
-        // TODO: tell user off then go to next question, keep track of score
+        if(q.correct_answer == clicked) {
+            questionsCorrect++;
+            // TODO: say "correct!"
+        } else {
+            questionsIncorrect++;
+            // TODO: tell user off
+        }
+
+        const nextQInfo = scavengerHuntData.sections[nextQ[0]].questions[nextQ[1]]; 
+        showQuestion_Prep(nextQInfo);
+        questionPopup(matrixElement, nextQInfo, nextQ[0], nextQ[1]);
     }
+}
+
+function showQuestion_Prep(currq) {
+    // reset parent
+    matrixElement.innerHTML = "";
+    matrixElement.textContent = currq.question;
 }
 
 function nextQuestion(currentS, currentQ) {
     const sectionQuestions = scavengerHuntData.sections[currentS].questions;
-    if(sectionQuestions.length >= currentQ) {
+    if(currentQ+1 >= sectionQuestions.length) {
         if(scavengerHuntData.sections[currentS+1]) {
-            return nextQuestion(currentS+1,0);
+            // TODO: NEW SECTION, DO STUFF ...
+            return nextQuestion(currentS+1,-1);
         } else {
-            return false;
+            return "complete";
         }
     } else {
-        return true;
+        return [currentS, currentQ+1];
     }
 }

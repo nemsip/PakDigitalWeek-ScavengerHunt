@@ -118,7 +118,7 @@ html {
 
 #matrix {
   display: none; /* Initially hidden */
-  font-size: 3.5rem;
+  font-size: 3rem; /* shrunk from 3.5 because questions kept going off screen for me, work on a more responsive solution */
   color: rgba(128, 255, 128, 0.8);
   text-align: center;
   position: absolute;
