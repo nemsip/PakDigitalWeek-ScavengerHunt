@@ -1,5 +1,10 @@
 @import url(https://fonts.bunny.net/css?family=jetbrains-mono:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i);
 
+html, body {
+  height: 100vh;
+  overflow-y: hidden !important; /* console text overflows on some screens */
+}
+
 body {
     color: rgba(128, 255, 128, 0.8);
     text-shadow: 0 0 1ex rgba(51, 255, 51, 1), 0 0 2px rgba(255, 255, 255, 0.8);
