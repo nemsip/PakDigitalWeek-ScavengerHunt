@@ -1,8 +1,7 @@
 var currq, section_number, question_number; // current question
 
 function pause(ms) {
-    // return new Promise(resolve => setTimeout(resolve, ms));
-    return true;
+    return new Promise(resolve => setTimeout(resolve, ms));
 }
 
 function randomNumber(min, max) {
