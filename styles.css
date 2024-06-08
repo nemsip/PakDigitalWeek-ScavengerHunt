@@ -214,6 +214,7 @@ html {
   align-items: center;
   justify-content: center;
   padding: 50px;
+  outline: 1px solid #004009;
   background-color: #002805; /* worry about design later */
   color: #59b167;
   border-radius: 5px;

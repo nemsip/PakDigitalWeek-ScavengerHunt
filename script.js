@@ -1,4 +1,5 @@
 var currq, section_number, question_number; // current question
+const matrixElement = document.getElementById('matrix'); // i don't want to pass this through all the functions
 
 function pause(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
@@ -88,7 +89,7 @@ document.addEventListener('keydown', async function start(event) {
         await pause(1000);
 
         // scrambleText
-        const element = document.getElementById('matrix');
+        const element = matrixElement;
         const duration = 5;
         const speed = 100;
         const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%&';
@@ -167,7 +168,22 @@ async function typeText(elm, txt) {
 function answerClicked(clicked, q, snum, qnum) {
     if(q.correct_answer == clicked) {
         alert("correct");
+        // TODO: go to next question, keep track of score
     } else {
         alert("incorrect");
+        // TODO: tell user off then go to next question, keep track of score
+    }
+}
+
+function nextQuestion(currentS, currentQ) {
+    const sectionQuestions = scavengerHuntData.sections[currentS].questions;
+    if(sectionQuestions.length >= currentQ) {
+        if(scavengerHuntData.sections[currentS+1]) {
+            return nextQuestion(currentS+1,0);
+        } else {
+            return false;
+        }
+    } else {
+        return true;
     }
 }
