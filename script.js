@@ -121,8 +121,7 @@ document.addEventListener('keydown', async function start(event) {
         section_number = 0;
         question_number = 0;
         currq = scavengerHuntData.sections[section_number].questions[question_number];
-
-        // TODO: Do something with scavengerHuntData
+        
         element.textContent = currq.question;
 
         questionPopup(element, currq, section_number, question_number);
@@ -130,7 +129,6 @@ document.addEventListener('keydown', async function start(event) {
 });
 
 async function questionPopup(parent, q, snum, qnum) {
-    // TODO: unscramble and animation
     const boxesparent = document.createElement("div");
     boxesparent.classList.add("btn-boxes");
 
@@ -183,15 +181,16 @@ async function answerClicked(clicked, q, snum, qnum) {
         alert("Done! " + Math.round(correctPercent) + "% correct");
     } else {
         const nextQInfo = scavengerHuntData.sections[nextQ[0]].questions[nextQ[1]]; 
-        showQuestion_Prep(nextQInfo);
+        await showQuestion_Prep(nextQInfo);
+        await pause(1200);
         questionPopup(matrixElement, nextQInfo, nextQ[0], nextQ[1]);
     }
 }
 
-function showQuestion_Prep(currq) {
+async function showQuestion_Prep(currq) {
     // reset parent
     matrixElement.innerHTML = "";
-    matrixElement.textContent = currq.question;
+    await unscrambleText(matrixElement, currq.question, 100);
 }
 
 async function statusSwitcher(correct) {
@@ -217,4 +216,31 @@ function nextQuestion(currentS, currentQ) {
     } else {
         return [currentS, currentQ+1];
     }
+}
+
+function getRandomChar() {
+    const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    return chars.charAt(Math.floor(Math.random() * chars.length));
+}
+
+async function unscrambleText(elm, finalText, interval = 300) {
+    let currentText = finalText.split('').map(char => char === ' ' ? ' ' : 'X').join('');
+    elm.innerText = currentText;
+
+    for (let i = 0; i <= finalText.length; i++) {
+        await pause(interval);
+        
+        currentText = finalText.split('').map((char, idx) => {
+            if (idx < i || char === ' ') {
+                return char;
+            } else {
+                return getRandomChar();
+            }
+        }).join('');
+        
+        elm.textContent = currentText;
+    }
+
+    elm.textContent = finalText;
+    return true;
 }
