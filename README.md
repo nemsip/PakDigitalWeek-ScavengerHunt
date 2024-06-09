@@ -1,9 +1,8 @@
 <!-- markdownlint-disable MD033 -->
+<div align="center">
 
 # Digital Week 2024 Scavenger Hunt
 
-<div align="center">
-  
 [![Live Website Preview](https://img.shields.io/badge/Live%20Website%20Preview-blue)](https://pakscavengerhunt.netlify.app/)
 [![Follow this Repo](https://img.shields.io/badge/Follow%20this%20Repo-green)](https://github.com/nemsip/PakDigitalWeek-ScavengerHunt/subscription)
 [![Contact the Digital Council](https://img.shields.io/badge/Contact-red)](mailto:walkhong+digitalcouncil@student.pakuranga.school.nz )
@@ -41,7 +40,9 @@ Contributions to the Scavenger Hunt Quiz project are welcome, as long as you and
 This project is licensed under Apache 2.0. See the `LICENSE` file for more details.
 
 <div align="center">
-<h2 style="text-align:center;">Proudly Brought to you by the Pakuranga College Digital council 2024</h2>
+•••
+<br><br>
+<h3 style="text-align:center;">Proudly Brought to you by the Pakuranga College Digital council 2024</h3>
 <a href="https://i.ibb.co/jz8LNkY/cropped-banner-low-res.png">
     <img src="https://i.ibb.co/jz8LNkY/cropped-banner-low-res.png" alt="Pakuranga College Digital Council 2024 Banner">
 </a>
