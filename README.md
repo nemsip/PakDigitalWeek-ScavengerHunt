@@ -11,6 +11,8 @@
 [![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-brightgreen.svg)](https://github.com/nemsip/PakDigitalWeek-ScavengerHunt/pulls)
 </div>
 
+![Title Screen Preview](https://i.ibb.co/fkr7hY6/Screenshot-2024-06-10-031045.png)
+
 Welcome to Digital Week 2024!
 This project is meant to be a cool looking presentation for the interactive quiz questions in the school-wide Scavenger Hunt Event.
 
@@ -37,3 +39,11 @@ Contributions to the Scavenger Hunt Quiz project are welcome, as long as you and
 ## ⚖️ License
 
 This project is licensed under Apache 2.0. See the `LICENSE` file for more details.
+
+## Proudly Brought to you by the Pakuranga College Digital Council 2024
+
+<div align="center">
+    <a href="https://i.ibb.co/jz8LNkY/cropped-banner-low-res.png">
+        <img src="https://i.ibb.co/jz8LNkY/cropped-banner-low-res.png" alt="Pakuranga College Digital Council 2024 Banner" width="600">
+    </a>
+</div>
