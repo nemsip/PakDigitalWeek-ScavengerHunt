@@ -2,6 +2,7 @@ var scavengerHuntData;
 var currq, section_number, question_number; // current question
 const matrixElement = document.getElementById('matrix'); // i don't want to pass this through all the functions
 var questionsCorrect = questionsIncorrect = 0;
+var autoCycleSections = true;
 
 function pause(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
@@ -47,12 +48,12 @@ document.addEventListener('keydown', async function start(event) {
         // displayConsoleOutput
         const delay = 10;
         const consoleElement = document.getElementById('console');
-        let lines = []; 
+        let lines = [];
 
         const viewportHeight = window.innerHeight;
-        const paddingTopBottom = 40 * 2; 
-        const fontSize = parseFloat(getComputedStyle(consoleElement).fontSize); 
-        const lineHeight = fontSize * 1.2; 
+        const paddingTopBottom = 40 * 2;
+        const fontSize = parseFloat(getComputedStyle(consoleElement).fontSize);
+        const lineHeight = fontSize * 1.2;
         const availableHeight = viewportHeight - paddingTopBottom;
         const maxLines = Math.floor(availableHeight / lineHeight);
 
@@ -76,7 +77,7 @@ document.addEventListener('keydown', async function start(event) {
                 await pause(delay);
             }
         }
-        
+
         // showAccessGranted
         await pause(1000);
         document.querySelector('.access-granted').style.display = 'block';
@@ -120,10 +121,31 @@ document.addEventListener('keydown', async function start(event) {
 
         section_number = 0;
         question_number = 0;
+
+        windowhash = window.location.hash.toLowerCase();
+        if(windowhash == "#misinformation") {
+          section_number = 0;
+          autoCycleSections = false;
+        } else if(windowhash == "#onlinesafety") {
+          section_number = 1;
+          autoCycleSections = false;
+        } else if(windowhash == "#2fa") {
+          section_number = 2;
+          autoCycleSections = false;
+        } else if(windowhash == "#searchhistory") {
+          section_number = 3;
+          autoCycleSections = false;
+        } else if(windowhash == "#ai") {
+          section_number = 4;
+          autoCycleSections = false;
+        }
+
         currq = scavengerHuntData.sections[section_number].questions[question_number];
-        
         element.textContent = currq.question;
 
+        await showQuestion_Prep(currq);
+
+        nextQuestion(section_number, question_number-1)
         questionPopup(element, currq, section_number, question_number);
     }
 });
@@ -180,7 +202,7 @@ async function answerClicked(clicked, q, snum, qnum) {
         const correctPercent = (100 * questionsCorrect) / questionTotal;
         alert("Done! " + Math.round(correctPercent) + "% correct");
     } else {
-        const nextQInfo = scavengerHuntData.sections[nextQ[0]].questions[nextQ[1]]; 
+        const nextQInfo = scavengerHuntData.sections[nextQ[0]].questions[nextQ[1]];
         await showQuestion_Prep(nextQInfo);
         await pause(1200);
         questionPopup(matrixElement, nextQInfo, nextQ[0], nextQ[1]);
@@ -207,7 +229,7 @@ async function statusSwitcher(correct) {
 function nextQuestion(currentS, currentQ) {
     const sectionQuestions = scavengerHuntData.sections[currentS].questions;
     if(currentQ+1 >= sectionQuestions.length) {
-        if(scavengerHuntData.sections[currentS+1]) {
+        if(scavengerHuntData.sections[currentS+1] && autoCycleSections) {
             // TODO: NEW SECTION, DO STUFF ...
             return nextQuestion(currentS+1,-1);
         } else {
@@ -229,7 +251,7 @@ async function unscrambleText(elm, finalText, interval = 300) {
 
     for (let i = 0; i <= finalText.length; i++) {
         await pause(interval);
-        
+
         currentText = finalText.split('').map((char, idx) => {
             if (idx < i || char === ' ') {
                 return char;
@@ -237,7 +259,7 @@ async function unscrambleText(elm, finalText, interval = 300) {
                 return getRandomChar();
             }
         }).join('');
-        
+
         elm.textContent = currentText;
     }
 
