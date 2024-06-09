@@ -1,4 +1,6 @@
 <!-- markdownlint-disable MD033 -->
+<!-- markdownlint-disable MD041 -->
+
 <div align="center">
 
 # Digital Week 2024 Scavenger Hunt
