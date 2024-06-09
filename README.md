@@ -40,11 +40,10 @@ Contributions to the Scavenger Hunt Quiz project are welcome, as long as you and
 This project is licensed under Apache 2.0. See the `LICENSE` file for more details.
 
 <div align="center">
-<br>
 ---
 •••
 ---
-<br><br>
+<br>
 <h3 style="text-align:center;">Proudly Brought to you by the Pakuranga College Digital council 2024</h3>
 <a href="https://i.ibb.co/jz8LNkY/cropped-banner-low-res.png">
     <img src="https://i.ibb.co/jz8LNkY/cropped-banner-low-res.png" alt="Pakuranga College Digital Council 2024 Banner">
