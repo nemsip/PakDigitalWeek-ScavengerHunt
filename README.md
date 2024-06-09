@@ -6,7 +6,7 @@
 [![Live Website Preview](https://img.shields.io/badge/Live%20Website%20Preview-blue)](https://pakscavengerhunt.netlify.app/)
 [![Follow this Repo](https://img.shields.io/badge/Follow%20this%20Repo-green)](https://github.com/nemsip/PakDigitalWeek-ScavengerHunt/subscription)
 [![Contact the Digital Council](https://img.shields.io/badge/Contact-red)](mailto:walkhong+digitalcouncil@student.pakuranga.school.nz )
-<br><br>
+<br>
 [![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-brightgreen.svg)](https://github.com/nemsip/PakDigitalWeek-ScavengerHunt/pulls)
 </div>
 
