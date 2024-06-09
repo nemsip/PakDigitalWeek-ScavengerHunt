@@ -44,6 +44,6 @@ This project is licensed under Apache 2.0. See the `LICENSE` file for more detai
 
 <div align="center">
     <a href="https://i.ibb.co/jz8LNkY/cropped-banner-low-res.png">
-        <img src="https://i.ibb.co/jz8LNkY/cropped-banner-low-res.png" alt="Pakuranga College Digital Council 2024 Banner" width="600">
+        <img src="https://i.ibb.co/jz8LNkY/cropped-banner-low-res.png" alt="Pakuranga College Digital Council 2024 Banner">
     </a>
 </div>
