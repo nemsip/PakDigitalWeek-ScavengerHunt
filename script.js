@@ -21,6 +21,8 @@ function getLetterFromNumber(r,t=!0){const e=t?65:97;let o="";do{o=String.fromCh
 const fetchConfig = fetch('config.json');
 const fetchText = fetch('consoleanimationtext.txt');
 
+document.addEventListener("hashchange", window.location.reload());
+
 document.addEventListener("DOMContentLoaded", async () => {
     section_number = 0;
     question_number = 0;
