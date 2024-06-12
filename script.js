@@ -22,15 +22,17 @@ function getLetterFromNumber(r,t=!0){const e=t?65:97;let o="";do{o=String.fromCh
 const fetchConfig = fetch('config.json');
 const fetchText = fetch('consoleanimationtext.txt');
 
-document.addEventListener("hashchange", function() {
-    setTimeout(function() {
-        if(currentHash != window.location.hash) {
-            window.location.reload();
-        }
-    }, 10);
-});
+function reloadIfNotSameHash() {
+    if(currentHash != window.location.hash) {
+        currentHash = window.location.hash;
+        window.location.reload();
+    }
+    setTimeout(reloadIfNotSameHash, 100);
+}
 
 document.addEventListener("DOMContentLoaded", async () => {
+    reloadIfNotSameHash();
+
     section_number = 0;
     question_number = 0;
 
