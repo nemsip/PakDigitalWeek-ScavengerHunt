@@ -3,6 +3,7 @@ var currq, section_number, question_number; // current question
 const matrixElement = document.getElementById('matrix'); // i don't want to pass this through all the functions
 var questionsCorrect = questionsIncorrect = 0;
 var autoCycleSections = true;
+let currentHash = window.location.hash;
 
 function pause(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
@@ -23,7 +24,9 @@ const fetchText = fetch('consoleanimationtext.txt');
 
 document.addEventListener("hashchange", function() {
     setTimeout(function() {
-      window.location.reload();
+        if(currentHash != window.location.hash) {
+            window.location.reload();
+        }
     }, 10);
 });
 
