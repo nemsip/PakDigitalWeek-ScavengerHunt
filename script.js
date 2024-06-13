@@ -4,6 +4,8 @@ const matrixElement = document.getElementById('matrix'); // i don't want to pass
 var questionsCorrect = questionsIncorrect = 0;
 var autoCycleSections = true;
 let currentHash = window.location.hash;
+var كود_رائع_للغاية_خاص_للغاية_مذهل_للغاية = "there is no code for this question";
+var hint;
 
 function pause(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
@@ -44,18 +46,22 @@ document.addEventListener("DOMContentLoaded", async () => {
     } else if(windowhash == "#onlinesafety") {
         section_number = 1;
         autoCycleSections = false;
+        كود_رائع_للغاية_خاص_للغاية_مذهل_للغاية = "EET";
         document.querySelector("#subtitle-txt").innerText = "ONLINE SAFETY";
     } else if(windowhash == "#2fa") {
         section_number = 2;
         autoCycleSections = false;
+        كود_رائع_للغاية_خاص_للغاية_مذهل_للغاية = "GIK";
         document.querySelector("#subtitle-txt").innerText = "2 FACTOR AUTHENTICATION";
     } else if(windowhash == "#searchhistory") {
         section_number = 3;
         autoCycleSections = false;
+        كود_رائع_للغاية_خاص_للغاية_مذهل_للغاية = "LAW";
         document.querySelector("#subtitle-txt").innerText = "SEARCH HISTORY";
     } else if(windowhash == "#ai") {
         section_number = 4;
         autoCycleSections = false;
+        كود_رائع_للغاية_خاص_للغاية_مذهل_للغاية = "EID";
         document.querySelector("#subtitle-txt").innerText = "ARTIFICIAL INTELLIGENCE";
     } else {
         document.querySelector(".subtitle").style.display = "none";
@@ -66,14 +72,14 @@ document.addEventListener("DOMContentLoaded", async () => {
     document.addEventListener('keydown', async function start(event) {
         if (event.key === 'Enter') {
             document.removeEventListener('keydown', start);
-    
+
             // fadeOutElements
             document.querySelector('.title').classList.add('fade-out');
             document.querySelector('.subtitle').classList.add('fade-out');
             document.querySelector('.begin-text').classList.add('fade-out');
             await pause(2100);
             document.getElementById("console").style.display = 'block';
-    
+
             // fetchTextFromFile
             let textArray = [];
             try {
@@ -86,26 +92,26 @@ document.addEventListener("DOMContentLoaded", async () => {
             } catch (error) {
                 console.error('Error fetching text:', error);
             }
-    
+
             // displayConsoleOutput
             const delay = 10;
             const consoleElement = document.getElementById('console');
             let lines = [];
-    
+
             const viewportHeight = window.innerHeight;
             const paddingTopBottom = 40 * 2;
             const fontSize = parseFloat(getComputedStyle(consoleElement).fontSize);
             const lineHeight = fontSize * 1.2;
             const availableHeight = viewportHeight - paddingTopBottom;
             const maxLines = Math.floor(availableHeight / lineHeight);
-    
+
             // appendLine
             for (const line of textArray) {
                 if (line.startsWith("DELAY:")) {
                     const delayTime = parseFloat(line.substring(6));
                     await pause(delayTime * 1000);
                 } else {
-    
+
                     // processLine
                     if (!line.includes("GRANTED")) {
                         lines.push(line);
@@ -119,11 +125,11 @@ document.addEventListener("DOMContentLoaded", async () => {
                     await pause(delay);
                 }
             }
-    
+
             // showAccessGranted
             await pause(1000);
             document.querySelector('.access-granted').style.display = 'block';
-    
+
             // hideElements
             await pause(3000);
             document.getElementById("console").style.display = 'none';
@@ -132,7 +138,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             document.querySelector('.access-granted').style.display = 'none';
             document.getElementById("matrix").style.display = 'block';
             await pause(1000);
-    
+
             // scrambleText
             const element = matrixElement;
             const duration = 5;
@@ -140,7 +146,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%&';
             const iterations = duration * (1000 / speed);
             element.textContent = "111111111111";
-    
+
             // updateText
             for (let currentIteration = 0; currentIteration < iterations; currentIteration++) {
                 let scramble = '';
@@ -150,7 +156,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                 element.textContent = scramble;
                 await pause(speed);
             }
-    
+
             try {
                 const response = await fetchConfig; // fetch('config.json');
                 if (!response.ok) {
@@ -160,12 +166,12 @@ document.addEventListener("DOMContentLoaded", async () => {
             } catch (error) {
                 console.error('Error fetching questions:', error);
             }
-    
+
             currq = scavengerHuntData.sections[section_number].questions[question_number];
             element.textContent = currq.question;
-    
+
             await showQuestion_Prep(currq);
-    
+
             nextQuestion(section_number, question_number-1)
             questionPopup(element, currq, section_number, question_number);
         }
@@ -222,7 +228,7 @@ async function answerClicked(clicked, q, snum, qnum) {
         // ...
         const questionTotal = questionsCorrect+questionsIncorrect;
         const correctPercent = (100 * questionsCorrect) / questionTotal;
-        alert("Done! " + Math.round(correctPercent) + "% correct");
+        alert("Done! " + Math.round(correctPercent) + "% correct. The code for this question is: " + كود_رائع_للغاية_خاص_للغاية_مذهل_للغاية + " (remember to write it down!)");
     } else {
         const nextQInfo = scavengerHuntData.sections[nextQ[0]].questions[nextQ[1]];
         await showQuestion_Prep(nextQInfo);
