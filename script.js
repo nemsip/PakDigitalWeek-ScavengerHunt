@@ -219,27 +219,33 @@ async function typeText(elm, txt) {
 }
 
 async function answerClicked(clicked, q, snum, qnum) {
-    // continue:
-    var nextQ = nextQuestion(snum, qnum);
+    // nextQ = nextQuestion(snum, qnum);
 
     if(q.correct_answer == clicked) {
         questionsCorrect++;
         await statusSwitcher(true);
     } else {
-        // questionsIncorrect++;
+        questionsIncorrect++;
         await statusSwitcher(false);
 
-        // retry:
+        /* DONT DO THIS // retry:
         console.log("Retrying question..")
-        nextQ = nextQuestion(snum, qnum, false);
+        nextQ = nextQuestion(snum, qnum, false);*/
     }
 
-    //const nextQ = nextQuestion(snum, qnum);
+    // continue:
+    var nextQ = nextQuestion(snum, qnum);
     if(nextQ == "complete") {
         // ...
         const questionTotal = questionsCorrect+questionsIncorrect;
         const correctPercent = (100 * questionsCorrect) / questionTotal;
-        alert("Done! " + Math.round(correctPercent) + "% correct. The code for this section is: " + كود_رائع_للغاية_خاص_للغاية_مذهل_للغاية + " (remember to write it down!)");
+        if(correctPercent >= 80) {
+          alert("Done! " + Math.round(correctPercent) + "% correct. The code for this section is: " + كود_رائع_للغاية_خاص_للغاية_مذهل_للغاية + " (remember to write it down!)");
+          window.location.reload();
+        } else {
+          alert("Your score of " + correctPercent + "% did not reach the minimum 80% to get the code. Try taking this quiz again.");
+          window.location.reload();
+        }
     } else {
         const nextQInfo = scavengerHuntData.sections[nextQ[0]].questions[nextQ[1]];
         await showQuestion_Prep(nextQInfo);
