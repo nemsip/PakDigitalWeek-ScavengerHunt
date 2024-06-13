@@ -215,19 +215,19 @@ async function typeText(elm, txt) {
 }
 
 async function answerClicked(clicked, q, snum, qnum) {
+    // continue:
+    var nextQ = nextQuestion(snum, qnum);
+
     if(q.correct_answer == clicked) {
         questionsCorrect++;
         await statusSwitcher(true);
-
-        // continue:
-        const nextQ = nextQuestion(snum, qnum);
     } else {
         // questionsIncorrect++;
         await statusSwitcher(false);
 
         // retry:
         console.log("Retrying question..")
-        const nextQ = nextQuestion(snum, qnum, false);
+        nextQ = nextQuestion(snum, qnum, false);
     }
 
     //const nextQ = nextQuestion(snum, qnum);
