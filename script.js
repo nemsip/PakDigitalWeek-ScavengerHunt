@@ -7,6 +7,10 @@ let currentHash = window.location.hash;
 var كود_رائع_للغاية_خاص_للغاية_مذهل_للغاية = "there is no code for this question";
 var hint;
 
+function playAudio() {
+  document.querySelector("#bgAudio").play();
+}
+
 function pause(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }

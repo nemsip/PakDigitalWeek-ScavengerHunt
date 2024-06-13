@@ -43,7 +43,7 @@ body {
     align-items: center;
     width: 100%;
     max-width: 600px;
-    margin-top: 150px; 
+    margin-top: 150px;
 }
 
 @keyframes flash {
@@ -61,7 +61,7 @@ body {
 .begin-prompt {
     font-size: 1.5rem;
 }
-  
+
 :root {
   --background: transparent;
   --size: 1.4;
@@ -85,9 +85,9 @@ html {
 }
 
 #console {
-    position: absolute; 
-    top: 0; 
-    left: 0; 
+    position: absolute;
+    top: 0;
+    left: 0;
     display: none;
     font-size: 0.8rem;
     text-align: left;
@@ -97,8 +97,8 @@ html {
 }
 
 #console p {
-    font-size: 0.8rem; 
-    margin: 0; 
+    font-size: 0.8rem;
+    margin: 0;
 }
 
 .access-granted {
@@ -194,7 +194,7 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh; 
+  height: 100vh;
   /* text-transform: uppercase; */
   position: relative;
 }
@@ -223,11 +223,30 @@ html {
   background-color: #002805; /* worry about design later */
   color: #59b167;
   border-radius: 5px;
-  font-size: 16px; 
+  font-size: 16px;
   cursor: pointer;
   transition: 0.3s;
 }
 
 .btn-box:hover {
   background-color: #001b03;
+}
+
+.audio-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #0f0f0f;
+  color: white;
+  border-radius: 15px;
+  width: 40px;
+  height: 40px;
+  border: none;
+  cursor: pointer;
+  color: white;
+  z-index: 9999;
+}
+
+.audio-btn:hover {
+  background: dimgray;
 }

@@ -5,12 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Digital Week 2024 Scavenger Hunt Question Presentation Site">
     <meta name="author" content="Pakuranga College Digital Council">
-    
-    <title id="2fa">Scavenger Hunt</title>
-    <link rel="stylesheet" href="styles.css">    
-</head>
 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <title id="2fa">Scavenger Hunt</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
 <body>
+    <audio id="bgAudio" onplay="document.querySelector('.audio-btn').style.display='none';" autoplay>
+        <source src="https://lmgtfy.1232342.xyz/files/digital_council_scqnvenger_hint.mp3" type="audio/mpeg">
+        <source src="./Sound Design/digital_council_scqnvenger_hint.mp3" type="audio/mpeg">
+        The audio couldn't be played.
+    </audio>
+
     <div class="terminal">
         <div class="noise"></div>
         <div class="overlay"></div>
@@ -25,6 +32,9 @@
             </div>
         </div>
     </div>
+
+    <button type="button" class="audio-btn" onclick="playAudio()" name="button"><span class="material-symbols-rounded">volume_up</span></button>
+
     <script src="script.js"></script>
 </body>
 </html>
