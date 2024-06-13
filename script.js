@@ -218,17 +218,24 @@ async function answerClicked(clicked, q, snum, qnum) {
     if(q.correct_answer == clicked) {
         questionsCorrect++;
         await statusSwitcher(true);
+
+        // continue:
+        const nextQ = nextQuestion(snum, qnum);
     } else {
-        questionsIncorrect++;
+        // questionsIncorrect++;
         await statusSwitcher(false);
+
+        // retry:
+        console.log("Retrying question..")
+        const nextQ = nextQuestion(snum, qnum, false);
     }
 
-    const nextQ = nextQuestion(snum, qnum);
+    //const nextQ = nextQuestion(snum, qnum);
     if(nextQ == "complete") {
         // ...
         const questionTotal = questionsCorrect+questionsIncorrect;
         const correctPercent = (100 * questionsCorrect) / questionTotal;
-        alert("Done! " + Math.round(correctPercent) + "% correct. The code for this question is: " + كود_رائع_للغاية_خاص_للغاية_مذهل_للغاية + " (remember to write it down!)");
+        alert("Done! " + Math.round(correctPercent) + "% correct. The code for this section is: " + كود_رائع_للغاية_خاص_للغاية_مذهل_للغاية + " (remember to write it down!)");
     } else {
         const nextQInfo = scavengerHuntData.sections[nextQ[0]].questions[nextQ[1]];
         await showQuestion_Prep(nextQInfo);
@@ -254,17 +261,25 @@ async function statusSwitcher(correct) {
     }
 }
 
-function nextQuestion(currentS, currentQ) {
+function nextQuestion(currentS, currentQ, progress = true) {
     const sectionQuestions = scavengerHuntData.sections[currentS].questions;
     if(currentQ+1 >= sectionQuestions.length) {
         if(scavengerHuntData.sections[currentS+1] && autoCycleSections) {
             // TODO: NEW SECTION, DO STUFF ...
-            return nextQuestion(currentS+1,-1);
+            if(progress) {
+              return nextQuestion(currentS+1,-1);
+            } else {
+              return [currentS, currentQ];
+            }
         } else {
             return "complete";
         }
     } else {
+      if(progress) {
         return [currentS, currentQ+1];
+      } else {
+        return [currentS, currentQ];
+      }
     }
 }
 
