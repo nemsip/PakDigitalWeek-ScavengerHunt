@@ -272,7 +272,11 @@ function nextQuestion(currentS, currentQ, progress = true) {
               return [currentS, currentQ];
             }
         } else {
-            return "complete";
+            if(progress) {
+              return "complete";
+            } else {
+              return [currentS, currentQ];
+            }
         }
     } else {
       if(progress) {
