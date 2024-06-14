@@ -208,7 +208,7 @@ html {
 
 .btn-boxes {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* fr fr - ethry*/      /* LMFAOO good one - cryptic */
+  grid-template-columns: 1fr 1fr; /* fr fr */      /* LMFAOO good one - cryptic */
   grid-template-rows: 1fr 1fr;
   grid-gap: 7px;
   margin-top: 10px;
@@ -260,5 +260,5 @@ html {
 
 a {
   color: rgba(128, 255, 128, 0.8);
-  font-weight: bold;
+  font-weight:bolder;
 }
