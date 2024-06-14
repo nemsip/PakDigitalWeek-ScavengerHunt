@@ -29,9 +29,9 @@ When pressing enter, the text fade out, and a console animation is shown. This o
 
 ## 📃 TODO
 
-- **Sound Design**: Ambient Sound Design and BGM for the website.
+- **Sound Design**: Ambient Sound Design and BGM for the website. (70% done)
 
-- **Hint to the Next Stall**: After the user answers the question, the question disappears, then a new (unplanned) animation reveals the hint to find the next question of the scavenger hunt somewhere else in the school.
+- ~~**Hint to the Next Stall**: After the user answers the question, the question disappears, then a new (unplanned) animation reveals the hint to find the next question of the scavenger hunt somewhere else in the school.~~ (No longer happening, it's random.)
 
 ## 🛠️ Contributing
 
