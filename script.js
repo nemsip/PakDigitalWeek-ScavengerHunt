@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         autoCycleSections = false;
         كود_رائع_للغاية_خاص_للغاية_مذهل_للغاية = "EID";
         document.querySelector("#subtitle-txt").innerText = "SEARCH HISTORY";
-    } else if(windowhash != "all") {
+    } else if(windowhash != "#all") {
         window.location.href = "/choose-type.html";
         document.body.style.display = "none";
     } else {
