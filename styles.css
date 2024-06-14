@@ -261,4 +261,14 @@ html {
 a {
   color: rgba(128, 255, 128, 0.8);
   font-weight:bolder;
+  transition: color 0.5s ease;
+}
+
+a:hover {
+  transition: color 0.5s ease;
+  color: rgb(201, 255, 199);
+}
+
+a:not(:hover) {
+  color: inherit;
 }
