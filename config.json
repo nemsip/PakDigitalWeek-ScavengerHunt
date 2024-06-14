@@ -129,32 +129,6 @@
             "correct_answer": "D"
           }
         ]
-      },
-      {
-        "title": "Artificial Intelligence",
-        "questions": [
-          {
-            "question": "What is AI?",
-            "options": [
-              "A) AI is the simulation of human intelligence by using machine learning",
-              "B) A type of computer game.",
-              "C) A popular social media platform.",
-              "D) A method of cooking food quickly."
-            ],
-            "correct_answer": "A"
-          },
-          {
-            "question": "How can AI help you?",
-            "options": [
-              "A) By teaching you how to cook your favorite meals.",
-              "B) By helping you find the perfect outfit for any occasion.",
-              "C) By assisting you in organizing your schedule and reminders.",
-              "D) By predicting your favorite movies to watch."
-            ],
-            "correct_answer": "C"
-          }
-        ]
       }
     ]
   }
-  

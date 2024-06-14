@@ -46,27 +46,23 @@ document.addEventListener("DOMContentLoaded", async () => {
     if(windowhash == "#misinformation") {
         section_number = 0;
         autoCycleSections = false;
+        كود_رائع_للغاية_خاص_للغاية_مذهل_للغاية = "EET";
         document.querySelector("#subtitle-txt").innerText = "MISINFORMATION";
     } else if(windowhash == "#onlinesafety") {
         section_number = 1;
         autoCycleSections = false;
-        كود_رائع_للغاية_خاص_للغاية_مذهل_للغاية = "EET";
+        كود_رائع_للغاية_خاص_للغاية_مذهل_للغاية = "GIK";
         document.querySelector("#subtitle-txt").innerText = "ONLINE SAFETY";
     } else if(windowhash == "#2fa") {
         section_number = 2;
         autoCycleSections = false;
-        كود_رائع_للغاية_خاص_للغاية_مذهل_للغاية = "GIK";
+        كود_رائع_للغاية_خاص_للغاية_مذهل_للغاية = "LAW";
         document.querySelector("#subtitle-txt").innerText = "2 FACTOR AUTHENTICATION";
     } else if(windowhash == "#searchhistory") {
         section_number = 3;
         autoCycleSections = false;
-        كود_رائع_للغاية_خاص_للغاية_مذهل_للغاية = "LAW";
-        document.querySelector("#subtitle-txt").innerText = "SEARCH HISTORY";
-    } else if(windowhash == "#ai") {
-        section_number = 4;
-        autoCycleSections = false;
         كود_رائع_للغاية_خاص_للغاية_مذهل_للغاية = "EID";
-        document.querySelector("#subtitle-txt").innerText = "ARTIFICIAL INTELLIGENCE";
+        document.querySelector("#subtitle-txt").innerText = "SEARCH HISTORY";
     } else {
         document.querySelector(".subtitle").style.display = "none";
     }
